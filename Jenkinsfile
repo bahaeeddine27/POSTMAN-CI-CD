@@ -15,12 +15,12 @@ pipeline {
                 sh '''
                     npm install -g newman-reporter-allure
 
-                    mkdir -p /allure-results
+                    mkdir -p /allure-report
 
                     newman run collection.json \
                     -e preprod.json \
                     -r cli,allure \
-                    --reporter-allure-resultsDir /allure-results
+                    --reporter-allure-resultsDir /allure-report
                 '''
             }
         }
