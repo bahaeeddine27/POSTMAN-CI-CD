@@ -1,1 +1,0 @@
-{"success":true,"nbr_comments":1,"parent_id":null,"data":{"id":74,"parent_id":null,"contenu":"Super, je viens aussi !","created_at":"2026-08-20T10:10:45.000000Z","is_mine":true,"auteur":{"id":1000,"nomComplet":"Bahaeeddine","photo_profil":"https:\/\/thrundrz.fr\/backendpublic\/profil.png","is_abonne":false}}}

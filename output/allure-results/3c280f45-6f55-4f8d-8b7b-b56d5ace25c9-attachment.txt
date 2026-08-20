@@ -1,5 +1,0 @@
-pm.test("Status code is 200", function () {
-    pm.response.to.have.status(200);
-    pm.collectionVariables.set("token1",pm.response.json().token)
-    pm.collectionVariables.set("my_id",pm.response.json().user.id)
-});
