@@ -1,32 +1,17 @@
 pipeline {
     agent {
-        dockerfile {
-            filename 'Dockerfile'
-            args '-u root'
+        docker {
+            image 'postman/newman:latest'
+            args '-u root --entrypoint='
         }
     }
 
     stages {
 
-        stage('Lancer les tests API') {
+        stage('Lancer les tests') {
             steps {
-                sh '''
-                    newman run collection.json \
-                    -e preprod.json \
-                    -r cli,allure \
-                    --reporter-allure-export allure-results
-                '''
+                sh 'newman run collection.json -e preprod.json'
             }
-        }
-    }
-
-    post {
-        always {
-            allure([
-                includeProperties: false,
-                jdk: '',
-                results: [[path: 'allure-results']]
-            ])
         }
     }
 }
