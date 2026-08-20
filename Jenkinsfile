@@ -8,17 +8,23 @@ pipeline {
 
     stages {
 
-        stage('Lancer les tests') {
+        stage('Lancer les tests API') {
             steps {
-                sh 'newman run collection.json -e preprod.json'
+                sh '''
+                    newman run collection.json \
+                    -e preprod.json \
+                    -r cli,allure \
+                    --reporter-allure-resultsDir build/allure-results
+                '''
             }
-            post {
-                always {
-                    allure includeProperties: false,
-                           jdk: '',
-                           results: [[path: 'build/allure-results']]
-                }
-            }
+        }
+    }
+
+    post {
+        always {
+            allure includeProperties: false,
+                   jdk: '',
+                   results: [[path: 'build/allure-results']]
         }
     }
 }
