@@ -1,0 +1,40 @@
+{
+	"id": "70ba0b6c-2cca-455a-bfdb-9db48f20a106",
+	"name": "pre-prod",
+	"values": [
+		{
+			"key": "url",
+			"value": "https://preprod.thrundrz.fr/backendpublic/public/api/",
+			"type": "default",
+			"enabled": true
+		},
+		{
+			"key": "randomTitle",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "randomDescription",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "parentId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		},
+		{
+			"key": "postId",
+			"value": "",
+			"type": "any",
+			"enabled": true
+		}
+	],
+	"color": null,
+	"_postman_variable_scope": "environment",
+	"_postman_exported_at": "2026-08-20T08:43:25.011Z",
+	"_postman_exported_using": "Postman/11.108.0"
+}
