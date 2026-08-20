@@ -12,6 +12,13 @@ pipeline {
             steps {
                 sh 'newman run collection.json -e preprod.json'
             }
+            post {
+                always {
+                    allure includeProperties: false,
+                           jdk: '',
+                           results: [[path: 'build/allure-results']]
+                }
+            }
         }
     }
 }

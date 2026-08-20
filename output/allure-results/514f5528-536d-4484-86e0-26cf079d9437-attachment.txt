@@ -1,0 +1,5 @@
+const response = pm.response.json();
+
+pm.environment.set("postId", response.data.id);
+
+console.log("Post ID stocké :", response.data.id);

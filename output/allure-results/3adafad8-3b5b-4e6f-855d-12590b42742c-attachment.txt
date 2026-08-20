@@ -1,0 +1,5 @@
+const title = pm.variables.replaceIn("{{$randomCatchPhrase}}");
+const description = pm.variables.replaceIn("{{$randomLoremParagraph}}");
+
+pm.environment.set("randomTitle", title);
+pm.environment.set("randomDescription", description);

@@ -1,0 +1,15 @@
+pm.test("Status code is 200", function () {
+    pm.response.to.have.status(200);
+});
+const events = pm.response.json().events;
+
+// Random 1 event
+let index1 = Math.floor(Math.random() * events.length);
+
+// Récupérer les ids 
+let eventId1 = events[index1].id;
+
+// Stocker les variables de collection
+pm.collectionVariables.set("eventId1", eventId1);
+
+console.log("Event 1 :", eventId1);

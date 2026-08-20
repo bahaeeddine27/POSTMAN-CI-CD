@@ -1,0 +1,7 @@
+{
+  "nomComplet": "Bahaeeddine",
+  "email": "Glennie_Becker@yahoo.com",
+  "password": "motdepasse123",
+  "telephone": "0612345678",
+  "fcm_token": "fcm_xxx"
+}

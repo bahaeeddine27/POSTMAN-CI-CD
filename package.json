@@ -1,0 +1,22 @@
+{
+  "name": "postman-ci-cd-jenkins",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/bahaeeddine27/POSTMAN-CI-CD.git"
+  },
+  "keywords": [],
+  "type": "commonjs",
+  "bugs": {
+    "url": "https://github.com/bahaeeddine27/POSTMAN-CI-CD/issues"
+  },
+  "homepage": "https://github.com/bahaeeddine27/POSTMAN-CI-CD#readme",
+  "devDependencies": {
+    "newman-reporter-allure": "^2.15.1"
+  }
+}
