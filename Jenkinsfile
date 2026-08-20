@@ -15,12 +15,12 @@ pipeline {
                 sh '''
                     npm install -g newman-reporter-allure
 
-                    mkdir -p /allure-report
+                    mkdir -p allure-report
 
                     newman run collection.json \
                     -e preprod.json \
                     -r cli,allure \
-                    --reporter-allure-resultsDir /allure-report
+                    --reporter-allure-resultsDir allure-report
                 '''
             }
         }
@@ -32,7 +32,7 @@ pipeline {
                 allure([
                     includeProperties: false,
                     jdk: '',
-                    results: [[path: '/allure-report']]
+                    results: [[path: 'allure-report']]
                 ])
             }
         }
@@ -40,7 +40,7 @@ pipeline {
 
     post {
         always {
-            archiveArtifacts artifacts: '/allure-report/**',
+            archiveArtifacts artifacts: 'allure-report/**',
                              allowEmptyArchive: true
         }
     }
